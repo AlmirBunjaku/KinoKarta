@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WD - Projekat 3 - Almir Bunjaku - 9</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="kino.js"></script>
+</head>
+
+<body>
+    <!-- Header stranice -->
+    <div id="naslov">
+        <h1>Kino</h1>
+        <h3>Napravite ulaznicu</h3>
+    </div>
+
+    <!-- Odabir žanra -->
+    <h1 id="odFilm">Odaberite film</h1>
+    <ul id="zanr">
+        <button class="current">Svi</button>
+        <button>Akcija</button>
+        <button>Animacija</button>
+        <button>Avantura</button>
+        <button>Drama</button>
+        <button>Komedija</button>
+        <button>Sci-Fi</button>
+    </ul>
+
+    <!-- Galerija sa listom svih filmova, mijenja se ovisno o žanru -->
+    <div id="galerija">
+        <ul id="filmovi">
+            <!-- Filmovi imaju klasu koja odgovara žanru. Slike uzimaju sa linkova -->
+            <li class="akcija">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SY1000_CR0,0,675,1000_AL_.jpg" alt="The Dark Knight">The Dark Knight</a>
+            </li>
+            <li class="akcija">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SY1000_CR0,0,675,1000_AL_.jpg" alt="Inception">Inception</a>
+            </li>
+            <li class="akcija">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BOWE4ZDdhNmMtNzE5ZC00NzExLTlhNGMtY2ZhYjYzODEzODA1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX1000_.jpg" alt="Seven Samurai">Seven Samurai</a>
+            </li>
+            <li class="animacija">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BMjlmZmI5MDctNDE2YS00YWE0LWE5ZWItZDBhYWQ0NTcxNWRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="Spirited Away">Spirited Away</a>
+            </li>
+            <li class="animacija">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_SY1000_CR0,0,673,1000_AL_.jpg" alt="The Lion King">The Lion King</a>
+            </li>
+            <li class="animacija">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="Spider-man: Into the Spider-Verse">Spider-man: Into the Spider-Verse</a>
+            </li>
+            <li class="avantura">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,675,1000_AL_.jpg" alt="The Lord of the Rings: The Return of the King">The Lord of the Rings:
+                    The Return of the King</a>
+            </li>
+            <li class="avantura">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BMjA0ODEzMTc1Nl5BMl5BanBnXkFtZTcwODM2MjAxNA@@._V1_SY1000_CR0,0,664,1000_AL_.jpg" alt="Indiana Jones and the Raiders of the Lost Ark">Indiana Jones and the Raiders of the Lost Ark</a>
+            </li>
+            <li class="avantura">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BYWY5ZjhjNGYtZmI2Ny00ODM0LWFkNzgtZmI1YzA2N2MxMzA0XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SY1000_CR0,0,693,1000_AL_.jpg" alt="Lawrence of Arabia">Lawrence of Arabia</a>
+            </li>
+            <li class="drama">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" alt="The Shawshank Redemption">The Shawshank Redemption</a>
+            </li>
+            <li class="drama">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_CR0,0,666,1000_AL_.jpg" alt="Schindler's List">Schindler's List</a>
+            </li>
+            <li class="drama">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SY1000_CR0,0,649,1000_AL_.jpg" alt="12 Angry Men">12 Angry Men</a>
+            </li>
+            <li class="komedija">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BYmJmM2Q4NmMtYThmNC00ZjRlLWEyZmItZTIwOTBlZDQ3NTQ1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_SX670_AL_.jpg" alt="Life is Beautiful">Life is Beautiful</a>
+            </li>
+            <li class="komedija">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BNTkyOGVjMGEtNmQzZi00NzFlLTlhOWQtODYyMDc2ZGJmYzFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_CR0,0,694,1000_AL_.jpg" alt="3 Idiots">3 Idiots</a>
+            </li>
+            <li class="komedija">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BMDA0NjZhZWUtNmI2NC00MmFjLTgwZDYtYzVjZmNhMDVmOTBkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg" alt="Ferris Bueller's Day Off">Ferris Bueller's Day Off</a>
+            </li>
+            <li class="sci-fi">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_CR0,0,665,1000_AL_.jpg" alt="The Matrix">The Matrix</a>
+            </li>
+            <li class="sci-fi">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,641,1000_AL_.jpg" alt="Star Wars: Episode V: The Empire Strikes Back">Star Wars: Episode V:
+                    The Empire Strikes Back</a>
+            </li>
+            <li class="sci-fi">
+                <a href="#naslov"><img src="https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_SX675_AL_.jpg" alt="Interstellar">Interstellar</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Dugme za promjenu odabranog filma - vraća na početnu stranicu -->
+    <a href="#" id="reset">
+        <h1>Promijenite odabrani film</h1>
+    </a>
+
+    <!-- Izbor mjesta: sadrži poziciju projektora i div unutar kojeg se pojave mjesta -->
+    <div id="izbor">
+        <h1>Odaberite mjesto</h1>
+        <div id="projektor">PROJEKTOR</div>
+        <div id="mjesta"></div>
+
+        <!-- Dugme za potvrdu mjesta, pokreće kreiranje ulaznice -->
+        <div id="potvrdi">
+            <h2>Potvrdite mjesto</h2>
+        </div>
+    </div>
+
+    <!-- Div koji sadrži promjene boja i ulaznicu -->
+    <div id="ulaznica">
+        <div id="boje">
+            <div id="container">
+                <!-- Svaka boja se nalazi u zasebnom bloku i predstavlja color input sa default vrijednostima na početku -->
+                <label for="bojaPozadine">Boja pozadine:</label>
+                <input type="color" id="bojaPozadine" value="#f5f5f5">
+            </div>
+            <div id="container">
+                <label for="bojaTeksta">Boja teksta:</label>
+                <input type="color" id="bojaTeksta" value="#000000">
+            </div>
+            <div id="container">
+                <label for="bojaRuba">Boja ruba:</label>
+                <input type="color" id="bojaRuba" value="#94cc70">
+            </div>
+        </div>
+
+        <!-- Lijevi dio ulaznice sa podacima: naslov, film, žanr, vrijeme, datum, mjesto. Između određenih dijelova ima prekid (hr) -->
+        <div id="dugi">
+            <h2>ULAZNICA</h2>
+            <hr>
+            <p>Film: </p><span id="ulFilm"></span><br>
+            <p>Žanr: </p><span id="ulZanr"></span><br>
+            <hr>
+            <p>Vrijeme: </p><span id="ulVrijeme"></span><br>
+            <p>Datum: </p><span id="ulDatum"></span><br>
+            <p>Mjesto: </p><span id="ulMjesto"></span><br>
+        </div>
+
+        <!-- Desni dio ulaznice koji se treba kliknuti kako bi se iskoristila ulaznica -->
+        <div id="kratki">
+            <p>Kliknite ovdje da iskoristite ulaznicu!</p>
+        </div>
+    </div>
+
+    <!-- Opis projekta i principa rada -->
+    <div id="opis">
+        <h1>Opis projekta</h1>
+        <p>Ovaj projekat se koristi za izradu virtualne ulaznice za kino. Početna stranica sadrži naslov i podnaslov. Osim toga, ovdje je iskorišten jedan od ponuđenih projekata (Filterable Gallery) za prikaz filmova, pri čemu je moguća promjena žanra. Klikom
+            na neki od ponuđenih filmova, ta sekcija nestaje i na njenom mjestu se pojavljuje dugme za povratak (promjenu filma) i sekcija koja služi za izbor mjesta u kinu. Sekcija za izbor mjesta sadrži prikaz pozicije projektora u odnosu na mjesta
+            i sto dostupnih mjesta, kao i dugme za potvrdu izbora mjesta. Prikaz mjesta je izveden na način da se predviđenom divu za mjesta appenda sto mjesta, gdje se nakon svakih deset prelazi u novi red. Kako bi prikaz mjesta bio realističniji, upotrijebljena
+            je random funkcija za izbor broja do 99, čiji rezultat se zatim dijeli na dva jednaka dijela kako bi se popunjavanje mjesta izvelo simetrično (slično stvarnom kinu). Zauzeta mjesta postaju crvena i daju upozorenje ako se pokušaju odabrati.
+            Klikom na slobodno mjesto, ono postaje zeleno i čeka se potvrda mjesta. Klik na bilo koje mjesto nakon izbora slobodnog mjesta također prikazuje upozorenje. Odabrano mjesto se može poništiti ponovnim klikom na njega. Nakon potvrde mjesta,
+            pojavljuje se sekcija koja sadrži ulaznicu i njene postavke (boja pozadine, teksta i ruba). Ulaznica sadrži naziv odabranog filma i njegovog žanra, kao i vrijeme i datum kada je napravljena, uz broj mjesta koje je prethodno odabrano. Da bi
+            se ulaznica iskoristila, treba se kliknuti na njen desni dio (nakon isprekidane linije). Klikom na taj dio, on se odvaja od ostatka ulaznice i nestaje. Nakon par sekundi, nestaje i sekcija za izbor mjesta i ulaznicu. Na ekranu tada ostaje
+            samo dugme kojim se može ponoviti proces izrade ulaznice.
+        </p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,427 @@
+* {
+    /* Početni reset stilova */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Koristi sans-serif porodicu fontova */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    /* Boja pozadine stranice */
+    background-color: whitesmoke;
+}
+
+#naslov {
+    /* Stil headera */
+    /* Centriranje teksta */
+    text-align: center;
+    padding: 30px;
+    background-color: #a6e67e;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #94cc70;
+}
+
+#naslov h1 {
+    /* Veličina naslova */
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+#naslov h3 {
+    /* Debljina slova, ukidanje boldiranja */
+    font-weight: normal;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#zanr {
+    text-align: center;
+    /* Ukidanje simbola ispred svake stavke liste (dugmadi, u ovom slučaju) */
+    list-style-type: none;
+}
+
+#zanr button {
+    /* Omogućen izbor veličine, dugmadi su jedno do drugog */
+    display: inline-block;
+    background-color: #b8ff8c;
+    margin: 0 5px;
+    border: 1px solid #94cc70;
+    /* Zaobljenje uglova dugmeta */
+    border-radius: 50px;
+    width: 120px;
+    padding: 15px;
+    /* Kursor postaje kursor za linkove */
+    cursor: pointer;
+    /* Ukidanje ruba koji dodaje browser */
+    outline: none;
+}
+
+#zanr button {
+    /* Ukidanje underline */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#zanr button:hover {
+    /* Prelaskom miša preko dugmeta, dugme mijenja boju */
+    background-color: #a6e67e;
+}
+
+#zanr button.current {
+    /* Aktivno dugme ima različitu boju od ostatka */
+    background-color: #94cc70;
+}
+
+#galerija {
+    width: 70%;
+    height: 100%;
+    padding: 10px;
+    margin: 30px auto;
+    /* Centriranje bloka sa filmovima */
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #94cc70;
+    border-radius: 50px;
+}
+
+#filmovi {
+    display: grid;
+    /* Filmovi su poredani u 3 kolone širine jedne frakcijske jedinice */
+    grid-template-columns: repeat(3, 1fr);
+    /* Razmak između redova i kolona */
+    gap: 20px;
+    /* Centriranje u kolonama */
+    justify-items: center;
+    list-style-type: none;
+    width: 85%;
+}
+
+#filmovi li {
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    width: 170px;
+    font-size: 20px;
+    /* Filmovi nisu potpuno vidljivi */
+    opacity: 0.75;
+    background-color: whitesmoke;
+    border-radius: 35px;
+}
+
+#filmovi li:hover {
+    /* Prelaskom miša preko filma, film postaje potpuno vidljiv */
+    opacity: 1;
+}
+
+#filmovi a {
+    color: black;
+    text-decoration: none;
+}
+
+#filmovi img {
+    width: 150px;
+    border-radius: 30px;
+}
+
+#reset {
+    /* Blok nije vidljiv dok mu JS ne promijeni vidljivost */
+    display: none;
+    width: 70%;
+    margin: 30px auto;
+    background-color: white;
+    border: 1px solid #94cc70;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+#izbor {
+    width: 70%;
+    margin: 30px auto;
+    background-color: white;
+    border: 1px solid #94cc70;
+    border-radius: 50px;
+    padding-bottom: 15px;
+    /* Blok nije vidljiv dok mu JS ne promijeni vidljivost */
+    display: none;
+    /* Elementi se nalaze jedan ispod drugog, centrirani u parent bloku */
+    flex-direction: column;
+    align-items: center;
+}
+
+#projektor {
+    width: 430px;
+    height: 40px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    /* Centriranje teksta po vertikali i horizontali */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.slobodno {
+    /* Stil slobodnih mjesta */
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.slobodno:hover {
+    /* Prelaskom miša preko slobodnog mjesta, mijenja mu se boja i izgled kursora */
+    background-color: cyan;
+    cursor: pointer;
+}
+
+.zauzeto {
+    /* Stil zauzetih mjesta */
+    border: 1px solid black;
+    background-color: red;
+}
+
+.zauzeto:hover {
+    /* Prelaskom miša preko zauzetog mjesta, boja mu se ne mijenja od osnovne boje zauzetog mjesta - ukidanje cyan hover efekta */
+    background-color: red;
+}
+
+.odabrano {
+    /* Stil odabranog mjesta */
+    border: 1px solid black;
+    background-color: #a6e67e;
+}
+
+.odabrano:hover {
+    /* Prelaskom miša preko odabranog mjesta, boja mu se ne mijenja od osnovne boje odabranog mjesta - ukidanje cyan hover efekta */
+    background-color: #a6e67e;
+}
+
+#potvrdi {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: whitesmoke;
+    border: 1px solid #94cc70;
+    border-radius: 50px;
+}
+
+#potvrdi:hover {
+    background-color: #b8ff8c;
+    cursor: pointer;
+}
+
+#ulaznica {
+    width: 70%;
+    margin: 30px auto;
+    background-color: white;
+    border: 1px solid #94cc70;
+    border-radius: 50px;
+    /* Blok nije vidljiv dok mu JS ne promijeni vidljivost */
+    display: none;
+    justify-content: center;
+}
+
+#dugi {
+    background-color: whitesmoke;
+    width: 430px;
+    /* Nema margine sa strana kako bi bio spojen sa desnim dijelom ulaznice */
+    margin: 30px 0px;
+    padding: 20px;
+    border: 2px #94cc70;
+    /* Desni rub je isprekidana, ostali puna linija */
+    border-style: solid dashed solid solid;
+    /* Lijevi uglovi su zaobljeni, dok su desni uglasti zbog veze sa desnim dijelom ulaznice */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#dugi h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+#dugi p {
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+#dugi span {
+    font-weight: normal;
+}
+
+#dugi hr {
+    /* Stil horizontalnog prekida */
+    margin: 10px 0;
+    border: 1px solid #94cc70;
+}
+
+#kratki {
+    background-color: whitesmoke;
+    width: 150px;
+    margin: 30px 0px;
+    padding: 20px;
+    border: 2px #94cc70;
+    /* Lijevi rub ne postoji zbog veze sa lijevim dijelom ulaznice */
+    border-style: solid solid solid none;
+    /* Desni uglovi su zaobljeni, dok su lijevi uglasti zbog veze sa lijevim dijelom ulaznice */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* Centriranje teksta po vertikali i horizontali */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* Veličina proreda, radi ljepšeg prikaza */
+    line-height: 2rem;
+    font-weight: 600;
+    /* Pozicija se mora postaviti na relativnu kako bi se koristila .animate() funkcija u JQuery-ju */
+    position: relative;
+}
+
+#kratki:hover {
+    cursor: pointer;
+}
+
+#ulZanr {
+    /* Žanr napisan velikim početnim slovom, jer od skripte dobija mala slova */
+    text-transform: capitalize;
+}
+
+#boje {
+    /* Izbori boja su poredani u koloni, sa prostorom okolo elemenata */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 30px;
+}
+
+#container {
+    /* Izgled bloka sa izborom boje */
+    width: 100%;
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 10px;
+    border: 2px solid #94cc70;
+    border-radius: 10px;
+}
+
+#container label {
+    /* Izgled natpisa izbora boje */
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+#opis {
+    /* Stil bloka sa opisom projekta */
+    width: 70%;
+    margin: 30px auto;
+    padding: 0px 50px 30px 50px;
+    line-height: 1.5rem;
+    background-color: white;
+    border: 1px solid #94cc70;
+    border-radius: 50px;
+    /* Obostrano poravnanje teksta */
+    text-align: justify;
+}
+
+@media (max-width: 700px) {
+    /* stil za tablete */
+    #zanr button {
+        /* Tablet premješta dugmadi u nove redove, pa je potreban prostor između njih */
+        margin-bottom: 10px;
+    }
+    #galerija {
+        /* Blok ima širinu cijelog viewporta, radi manjeg ekrana */
+        width: 100vw;
+        /* Ukidanje rubova na stranama */
+        border-right: none;
+        border-left: none;
+        /* Ukidanje zaobljenja blokova */
+        border-radius: 0px;
+    }
+    #filmovi {
+        /* Filmovi su na tabletu poredani u dvije kolone širine frakcijske jedinice */
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #reset {
+        width: 100vw;
+        border-right: none;
+        border-left: none;
+        border-radius: 0px;
+    }
+    #izbor {
+        width: 100vw;
+        border-right: none;
+        border-left: none;
+        border-radius: 0px;
+    }
+    #ulaznica {
+        width: 100vw;
+        border-right: none;
+        border-left: none;
+        border-radius: 0px;
+    }
+    #container {
+        padding: 5px 0px;
+    }
+    #dugi {
+        /* Smanjena širina lijevog dijela ulaznice zbog manjeg ekrana */
+        width: 330px;
+    }
+    #kratki {
+        /* Smanjena širina desnog dijela ulaznice zbog manjeg ekrana */
+        width: 100px;
+        /* Smanjen padding zbog manjeg ekrana */
+        padding: 10px;
+    }
+    #opis {
+        width: 100vw;
+        border-right: none;
+        border-left: none;
+        border-radius: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 400px) {
+    /* stil za mobitele */
+    #zanr {
+        /* Dugmad za izbor žanra su poredana u kolonu i centrirana, što je preporučljivo za mobilni prikaz */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #zanr button {
+        /* Dugme ima skoro cijelu širinu viewporta */
+        width: 90vw;
+    }
+    #filmovi {
+        /* Filmovi su na mobitelu poredani u jednoj koloni širine frakcijske jedinice */
+        grid-template-columns: 1fr;
+    }
+    #projektor {
+        /* Projektor ima širinu 85% viewporta */
+        width: 85vw;
+    }
+    .slobodno {
+        /* Razmak između mjesta je manji kako bi se zadržao isti prikaz kao i na većim ekranima */
+        margin: 5px;
+    }
+    #dugi {
+        /* Smanjena širina lijevog dijela ulaznice zbog manjeg ekrana */
+        width: 200px;
+    }
+}
